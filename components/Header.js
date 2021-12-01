@@ -85,6 +85,7 @@ function Header() {
             </>
           ) : (
             <button
+              className="text-xs font-semibold md:text-xl"
               onClick={(e) => {
                 e.preventDefault();
                 router.push("/auth/signin");
