@@ -22,7 +22,7 @@ function Header() {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
-    <div className="shadow-sm sticky bg-white z-50 border-b p-1">
+    <div className="shadow-sm sticky bg-white z-50 border-b py-3 sm:py-0">
       <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
         <div className="relative hidden lg:block w-24">
           <Image
