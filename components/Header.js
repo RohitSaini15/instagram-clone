@@ -22,7 +22,7 @@ function Header() {
   const [isHidden, setIsHidden] = useState(true);
 
   return (
-    <div className="shadow-sm sticky bg-white z-50 border-b">
+    <div className="shadow-sm sticky bg-white z-50 border-b p-1">
       <div className="flex justify-between max-w-6xl mx-5 lg:mx-auto">
         <div className="relative hidden lg:block w-24">
           <Image
@@ -40,13 +40,13 @@ function Header() {
           ></Image>
         </div>
         {/*Search Bar*/}
-        <div className="max-w-xs">
+        <div className="flex-1 sm:flex-0 max-w-sm">
           <div className="relative mt-1 p-3 rounded-md">
             <div className="absolute inset-y-0 pointer-events-none flex items-center pl-3">
               <SearchIcon className="h-5 w-5 text-gray-500"></SearchIcon>
             </div>
             <input
-              className="bg-gray-50 pl-10 block w-full sm:text-sm border-gray-300 focus:ring-black focus:border-black rounded-md"
+              className="hidden sm:inline-block bg-gray-50 pl-10 block w-full sm:text-sm border-gray-300 focus:ring-black focus:border-black rounded-md"
               type="text"
               placeholder="Search"
             ></input>
@@ -85,7 +85,6 @@ function Header() {
             </>
           ) : (
             <button
-              className="text-xs font-semibold md:text-xl"
               onClick={(e) => {
                 e.preventDefault();
                 router.push("/auth/signin");
